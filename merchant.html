@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner with harrys</title>
+<style>
+  :root {
+    --navy: #2B2622;
+    --coral: #C97D5D;
+    --coral-dark: #B5674A;
+    --cream: #FBF6EF;
+    --cream-dark: #F3EAD9;
+    --text-primary: #2B2622;
+    --text-secondary: #5C5248;
+    --text-muted: #B08C7A;
+    --border: #E4D6C4;
+    --success: #6B8F71;
+    --error: #C1584A;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    background: var(--navy);
+    padding: 56px 24px 40px;
+    text-align: center;
+  }
+  header .brand { font-family: Georgia, serif; font-weight: 800; font-size: 26px; color: #fff; }
+  header h1 { font-family: Georgia, serif; color: #fff; font-size: 30px; margin: 16px 0 8px; }
+  header p { color: var(--cream-dark); font-size: 15px; max-width: 480px; margin: 0 auto; line-height: 1.5; }
+
+  main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+  @media (max-width: 560px) { .tiers { grid-template-columns: 1fr; } }
+  .tier {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+  }
+  .tier.promoted { border: 2px solid var(--coral); position: relative; }
+  .tier .badge {
+    position: absolute; top: -12px; left: 20px;
+    background: var(--coral); color: #fff; font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 999px; letter-spacing: 0.03em; text-transform: uppercase;
+  }
+  .tier h2 { font-size: 18px; margin: 0 0 4px; }
+  .tier .price { font-size: 28px; font-weight: 800; margin: 8px 0; font-family: Georgia, serif; }
+  .tier .price span { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+  .tier ul { margin: 16px 0 0; padding: 0 0 0 18px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+  h2.section-title { font-family: Georgia, serif; font-size: 22px; margin: 0 0 8px; }
+  .section-sub { color: var(--text-muted); font-size: 14px; margin: 0 0 28px; }
+
+  form { display: flex; flex-direction: column; gap: 18px; }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
+  .field input, .field select, .field textarea {
+    width: 100%; font-size: 15px; padding: 12px 14px; border-radius: 10px;
+    border: 1px solid var(--border); background: #fff; color: var(--text-primary); font-family: inherit;
+  }
+  .field textarea { resize: vertical; min-height: 60px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+
+  .plan-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  @media (max-width: 560px) { .plan-options { grid-template-columns: 1fr; } }
+  .plan-option {
+    border: 1.5px solid var(--border); border-radius: 12px; padding: 12px; text-align: center;
+    cursor: pointer; font-size: 13px; font-weight: 600; color: var(--text-secondary); background: #fff;
+  }
+  .plan-option.selected { border-color: var(--coral); background: var(--cream-dark); color: var(--text-primary); }
+  .plan-option .sub { display: block; font-weight: 400; color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+
+  button[type="submit"] {
+    background: var(--coral); color: #fff; border: none; border-radius: 12px;
+    padding: 15px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 8px;
+  }
+  button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+
+  #status { margin-top: 16px; font-size: 14px; padding: 12px 14px; border-radius: 10px; display: none; }
+  #status.show { display: block; }
+  #status.ok { background: var(--success); color: #fff; }
+  #status.err { background: var(--error); color: #fff; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">🎯 harrys</div>
+    <h1>Partner with harrys</h1>
+    <p>Own a local coffee shop, climbing gym, or bar? Join the Venue Network and attract first dates on quiet evenings.</p>
+  </header>
+
+  <main>
+    <div class="tiers">
+      <div class="tier">
+        <h2>Free listing</h2>
+        <div class="price">£0</div>
+        <ul>
+          <li>Appear in the general venue directory</li>
+          <li>Suggested in chat when relevant</li>
+        </ul>
+      </div>
+      <div class="tier promoted">
+        <span class="badge">Promoted</span>
+        <h2>Promoted listing</h2>
+        <div class="price">$49<span>/mo</span></div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:-6px;">or $499/yr</div>
+        <ul>
+          <li>Top placement in the venue list</li>
+          <li>Featured in the app's "Curated Date Spots"</li>
+          <li>Shown to more members, more often</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Apply now</h2>
+    <p class="section-sub">Takes two minutes. We'll follow up at the email you give us below.</p>
+
+    <form id="venue-form">
+      <div class="field">
+        <label for="name">Venue name</label>
+        <input id="name" required placeholder="The Hidden Bean Coffee Co.">
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="type">Venue type</label>
+          <input id="type" required placeholder="Coffee shop, bar, climbing gym...">
+        </div>
+        <div class="field">
+          <label for="cluster">Best-fit hobby cluster</label>
+          <select id="cluster" required>
+            <option value="">Select one...</option>
+            <option value="active-outdoors">🏔️ Active Outdoors</option>
+            <option value="water-life">🌊 Water Life</option>
+            <option value="sports-fitness">🏋️ Sports & Fitness</option>
+            <option value="creative-arts">🎨 Creative Arts</option>
+            <option value="food-drink">🍽️ Food & Drink</option>
+            <option value="music-nightlife">🎵 Music & Nightlife</option>
+            <option value="mind-growth">📚 Mind & Growth</option>
+            <option value="pet-life">🐕 Pet Life</option>
+            <option value="tech-gaming">🎮 Tech & Gaming</option>
+            <option value="travel-culture">🌍 Travel & Culture</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="address">Address</label>
+        <input id="address" required placeholder="14 Market Street, London">
+      </div>
+
+      <div class="field">
+        <label for="perk">Member perk you're offering</label>
+        <textarea id="perk" required placeholder="e.g. 10% off for anyone who mentions harrys"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="priceRange">Price range (optional)</label>
+          <select id="priceRange">
+            <option value="">—</option>
+            <option value="$">$</option>
+            <option value="$$">$$</option>
+            <option value="$$$">$$$</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contactEmail">Contact email</label>
+          <input id="contactEmail" type="email" required placeholder="you@yourvenue.com">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Which listing?</label>
+        <div class="plan-options" id="plan-options">
+          <div class="plan-option selected" data-plan="free">Free<span class="sub">List for free</span></div>
+          <div class="plan-option" data-plan="monthly">Promoted<span class="sub">$49/mo</span></div>
+          <div class="plan-option" data-plan="annual">Promoted<span class="sub">$499/yr</span></div>
+        </div>
+      </div>
+
+      <button type="submit" id="submit-btn">Submit application</button>
+      <div id="status"></div>
+    </form>
+  </main>
+
+<script>
+  const SUPABASE_URL = 'https://nriqqzsabbatdnvbbtac.supabase.co';
+  const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yaXFxenNhYmJhdGRudmJidGFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc2NTExNTIsImV4cCI6MjEwMzIyNzE1Mn0.l0937L1aHukO-W7Hgzt0HCIp05GLGoQwH4ceLU7159Q';
+
+  let selectedPlan = 'free';
+  document.querySelectorAll('.plan-option').forEach((el) => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.plan-option').forEach((o) => o.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedPlan = el.dataset.plan;
+    });
+  });
+
+  function setStatus(message, ok) {
+    const el = document.getElementById('status');
+    el.textContent = message;
+    el.className = 'show ' + (ok ? 'ok' : 'err');
+  }
+
+  async function callFunction(name, body) {
+    const res = await fetch(`${SUPABASE_URL}/functions/v1/${name}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${ANON_KEY}`,
+        apikey: ANON_KEY,
+      },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Something went wrong');
+    return data;
+  }
+
+  document.getElementById('venue-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    try {
+      const contactEmail = document.getElementById('contactEmail').value;
+      const { venueId } = await callFunction('submit-venue', {
+        name: document.getElementById('name').value,
+        type: document.getElementById('type').value,
+        clusterId: document.getElementById('cluster').value,
+        address: document.getElementById('address').value,
+        perk: document.getElementById('perk').value,
+        priceRange: document.getElementById('priceRange').value || null,
+        contactEmail,
+      });
+
+      if (selectedPlan === 'free') {
+        setStatus("You're in! We'll be in touch at " + contactEmail + " — your listing is live now.", true);
+        e.target.reset();
+        document.querySelectorAll('.plan-option').forEach((o) => o.classList.remove('selected'));
+        document.querySelector('.plan-option[data-plan="free"]').classList.add('selected');
+        selectedPlan = 'free';
+      } else {
+        setStatus('Redirecting you to checkout...', true);
+        const { url } = await callFunction('create-checkout-session', {
+          venueId,
+          plan: selectedPlan,
+          merchantEmail: contactEmail,
+        });
+        window.location.href = url;
+      }
+    } catch (err) {
+      setStatus(err.message, false);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Submit application';
+    }
+  });
+</script>
+</body>
+</html>
